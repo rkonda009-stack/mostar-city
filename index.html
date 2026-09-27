@@ -4,178 +4,266 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Mostar — Cinematic Journey</title>
+  <title>Mostar — A Cinematic Journey</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
 
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-  <main class="site-shell">
+  <div class="cursor"></div>
 
-    <section class="cinema-scroll" id="cinema">
+  <div class="noise"></div>
 
-      <div class="stage">
-        <div class="world">
+  <header class="header">
+    <a href="#intro" class="logo">MOSTAR</a>
 
-          <!-- SKY -->
-          <div class="sky"></div>
+    <nav>
+      <a href="#intro">INTRO</a>
+      <a href="#bridge">BRIDGE</a>
+      <a href="#bazaar">BAZAAR</a>
+    </nav>
 
-          <!-- HEADER -->
-          <header class="site-header">
-            <div class="brand">MOSTAR</div>
+    <div class="menu">
+      <span></span>
+      <span></span>
+    </div>
+  </header>
 
-            <nav>
-              <a href="#intro">INTRO</a>
-              <a href="#bridge-story">BRIDGE</a>
-              <a href="#bazaar-story">BAZAAR</a>
-            </nav>
-          </header>
 
-          <!-- BACKGROUND STACK -->
-          <div class="back-stack">
+  <!-- INTRO -->
 
-            <div class="back-four"></div>
+  <main>
 
-            <!-- SIGHTS SLIDER -->
-            <div class="sights-slider">
-              <div class="sight-card">
-                <span>01</span>
-                <h3>OLD BRIDGE</h3>
-              </div>
+    <section class="hero section" id="intro">
 
-              <div class="sight-card">
-                <span>02</span>
-                <h3>MOSTAR OLD TOWN</h3>
-              </div>
+      <div
+        class="hero-image parallax"
+        data-speed="0.15"
+      ></div>
 
-              <div class="sight-card">
-                <span>03</span>
-                <h3>Neretva River</h3>
-              </div>
-            </div>
+      <div class="hero-overlay"></div>
 
-            <div class="back-bazaar"></div>
+      <div class="frame frame-left"></div>
+      <div class="frame frame-right"></div>
 
-          </div>
+      <div class="hero-content">
 
-          <!-- CONTROLS -->
-          <div class="controls">
-            <button class="prev" type="button">←</button>
-            <button class="next" type="button">→</button>
-          </div>
+        <p class="eyebrow">
+          A CINEMATIC JOURNEY
+        </p>
 
-          <!-- MAIN TITLE -->
-          <div class="title">
-            <p class="eyebrow">A CINEMATIC JOURNEY</p>
+        <h1>NERETVA</h1>
 
-            <h1>
-              MOSTAR
-            </h1>
+        <p class="subtitle">
+          A river flowing through centuries of stories.
+        </p>
 
-            <p class="subtitle">
-              Where stone, water and history meet.
-            </p>
-          </div>
-
-          <!-- SPLIT FRAMES -->
-          <div class="splitframe-left"></div>
-          <div class="splitframe-right"></div>
-
-          <!-- BRIDGE -->
-          <div class="bridge"></div>
-
-          <!-- SECOND FRAME -->
-          <div class="frame-two"></div>
-
-          <!-- SHADE -->
-          <div class="shade"></div>
-
-        </div>
       </div>
 
-      <!-- INTRO -->
-      <section class="story intro" id="intro">
+      <div class="locations">
 
-        <div class="story-inner">
-
-          <span class="story-number">01</span>
-
-          <p class="story-label">
-            DISCOVER MOSTAR
-          </p>
-
-          <h2>
-            A city carved between
-            mountains and river.
-          </h2>
-
-          <p>
-            Mostar is a place where centuries of history,
-            stone architecture and the turquoise Neretva
-            come together in one unforgettable landscape.
-          </p>
-
+        <div class="location active">
+          <span>01</span>
+          <strong>OLD BRIDGE</strong>
         </div>
 
-      </section>
-
-      <!-- BRIDGE STORY -->
-      <section class="story bridge-story" id="bridge-story">
-
-        <div class="story-inner">
-
-          <span class="story-number">02</span>
-
-          <p class="story-label">
-            THE OLD BRIDGE
-          </p>
-
-          <h2>
-            A bridge connecting
-            two sides of history.
-          </h2>
-
-          <p>
-            Stari Most rises above the Neretva,
-            becoming the unmistakable symbol of Mostar.
-          </p>
-
+        <div class="location">
+          <span>02</span>
+          <strong>MOSTAR OLD TOWN</strong>
         </div>
 
-      </section>
-
-      <!-- BAZAAR STORY -->
-      <section class="story bazaar-story" id="bazaar-story">
-
-        <div class="story-inner">
-
-          <span class="story-number">03</span>
-
-          <p class="story-label">
-            OLD BAZAAR
-          </p>
-
-          <h2>
-            Walk slowly.
-            Look closely.
-          </h2>
-
-          <p>
-            Stone streets, small shops and old bridges
-            create an atmosphere that feels suspended
-            between past and present.
-          </p>
-
+        <div class="location">
+          <span>03</span>
+          <strong>NERETVA RIVER</strong>
         </div>
 
-      </section>
+      </div>
+
+      <div class="scroll-indicator">
+        <span>SCROLL TO EXPLORE</span>
+        <div></div>
+      </div>
+
+      <div class="hero-buttons">
+        <button onclick="previousSection()">←</button>
+        <button onclick="nextSection()">→</button>
+      </div>
+
+    </section>
+
+
+    <!-- BRIDGE -->
+
+    <section class="story section" id="bridge">
+
+      <div class="story-image-wrap">
+
+        <img
+          class="story-image parallax"
+          data-speed="0.12"
+          src="https://images.unsplash.com/photo-1772832776052-d160cef0b2d6?auto=format&fit=crop&fm=jpg&q=85&w=2400"
+          alt="Mostar Old Bridge"
+        >
+
+      </div>
+
+      <div class="story-number">
+        01
+      </div>
+
+      <div class="story-content">
+
+        <p class="eyebrow">
+          THE OLD BRIDGE
+        </p>
+
+        <h2>
+          STARI<br>
+          MOST
+        </h2>
+
+        <p>
+          Rising above the emerald waters of the Neretva,
+          Stari Most connects two sides of Mostar and carries
+          centuries of history across its stone arch.
+        </p>
+
+        <a href="#bazaar" class="explore-link">
+          EXPLORE MORE
+          <span>↗</span>
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- BAZAAR -->
+
+    <section class="bazaar section" id="bazaar">
+
+      <div class="bazaar-bg"></div>
+
+      <div class="bazaar-overlay"></div>
+
+      <div class="bazaar-content">
+
+        <p class="eyebrow">
+          MOSTAR OLD TOWN
+        </p>
+
+        <h2>
+          THE<br>
+          BAZAAR
+        </h2>
+
+        <p>
+          Narrow stone streets, traditional crafts,
+          warm cafés and the quiet rhythm of a city
+          shaped by many cultures.
+        </p>
+
+      </div>
+
+      <div class="bazaar-card">
+
+        <span>DISCOVER</span>
+
+        <h3>
+          A CITY<br>
+          BETWEEN<br>
+          WORLDS
+        </h3>
+
+        <div class="card-line"></div>
+
+        <p>
+          Walk slowly. Look closely.
+          Every corner has a story.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- RIVER -->
+
+    <section class="river section">
+
+      <div class="river-image"></div>
+
+      <div class="river-overlay"></div>
+
+      <div class="river-content">
+
+        <p class="eyebrow">
+          03 — THE RIVER
+        </p>
+
+        <h2>
+          FOLLOW<br>
+          THE FLOW
+        </h2>
+
+        <p>
+          The Neretva moves quietly beneath the bridge,
+          carrying the reflection of Mostar through time.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- END -->
+
+    <section class="ending section">
+
+      <div class="ending-content">
+
+        <p class="eyebrow">
+          MOSTAR · BOSNIA & HERZEGOVINA
+        </p>
+
+        <h2>
+          EVERY<br>
+          STONE<br>
+          REMEMBERS.
+        </h2>
+
+        <a href="#intro" class="back-top">
+          BACK TO TOP ↑
+        </a>
+
+      </div>
 
     </section>
 
   </main>
 
-  <script src="script.js" defer></script>
+
+  <footer>
+
+    <p>MOSTAR — A CINEMATIC JOURNEY</p>
+
+    <p>
+      Photography: Unsplash / Wikimedia Commons
+    </p>
+
+  </footer>
+
+
+  <script src="script.js"></script>
 
 </body>
 </html>
